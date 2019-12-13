@@ -1,0 +1,636 @@
+{
+  "data": {
+    "allDocuments": {
+      "edges": [
+        {
+          "node": {
+            "__typename": "Document",
+            "id": "RG9jdW1lbnQ6NDFjMGUxZjctNGM2Zi00YTllLTljMmEtN2RhZmRkYjhlNWEz",
+            "form": {
+              "__typename": "Form",
+              "slug": "test-form",
+              "name": "test-form",
+              "meta": {},
+              "questions": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "Rm9ybVF1ZXN0aW9uOmYx",
+                      "__typename": "FormQuestion",
+                      "slug": "f1",
+                      "label": "f1",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "subForm": {
+                        "__typename": "Form",
+                        "slug": "top-level-form-1",
+                        "name": "top-level-form-1",
+                        "questions": {
+                          "edges": [
+                            {
+                              "node": {
+                                "__typename": "TextQuestion",
+                                "slug": "text-question",
+                                "label": "text question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "textMaxLength": null,
+                                "placeholder": ""
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "TableQuestion",
+                                "slug": "table-question",
+                                "label": "table-question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "rowForm": {
+                                  "__typename": "Form",
+                                  "slug": "table-form",
+                                  "questions": {
+                                    "edges": [
+                                      {
+                                        "node": {
+                                          "__typename": "TextQuestion",
+                                          "slug": "text-question",
+                                          "label": "text question",
+                                          "isRequired": "false",
+                                          "isHidden": "false",
+                                          "meta": {},
+                                          "infoText": "",
+                                          "textMaxLength": null,
+                                          "placeholder": ""
+                                        }
+                                      },
+                                      {
+                                        "node": {
+                                          "__typename": "ChoiceQuestion",
+                                          "slug": "choice-question",
+                                          "label": "choice question",
+                                          "isRequired": "false",
+                                          "isHidden": "false",
+                                          "meta": {},
+                                          "infoText": "",
+                                          "choiceOptions": {
+                                            "edges": [
+                                              {
+                                                "node": {
+                                                  "__typename": "Option",
+                                                  "slug": "choice-question-opt-1",
+                                                  "label": "opt 1"
+                                                }
+                                              },
+                                              {
+                                                "node": {
+                                                  "__typename": "Option",
+                                                  "slug": "choice-question-opt-2",
+                                                  "label": "opt 2"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "id": "Rm9ybVF1ZXN0aW9uOmYy",
+                      "__typename": "FormQuestion",
+                      "slug": "f2",
+                      "label": "f2",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "subForm": {
+                        "__typename": "Form",
+                        "slug": "top-level-form-2",
+                        "name": "top-level-form-2",
+                        "questions": {
+                          "edges": [
+                            {
+                              "node": {
+                                "__typename": "FloatQuestion",
+                                "slug": "float-question",
+                                "label": "float question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "floatMinValue": null,
+                                "floatMaxValue": null,
+                                "placeholder": ""
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "ChoiceQuestion",
+                                "slug": "choice-question",
+                                "label": "choice question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "choiceOptions": {
+                                  "edges": [
+                                    {
+                                      "node": {
+                                        "__typename": "Option",
+                                        "slug": "choice-question-opt-1",
+                                        "label": "opt 1"
+                                      }
+                                    },
+                                    {
+                                      "node": {
+                                        "__typename": "Option",
+                                        "slug": "choice-question-opt-2",
+                                        "label": "opt 2"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "MultipleChoiceQuestion",
+                                "slug": "choices-question",
+                                "label": "choices-question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "multipleChoiceOptions": {
+                                  "edges": [
+                                    {
+                                      "node": {
+                                        "__typename": "Option",
+                                        "slug": "choices-question-opt1",
+                                        "label": "opt1"
+                                      }
+                                    },
+                                    {
+                                      "node": {
+                                        "__typename": "Option",
+                                        "slug": "choices-question-opt2",
+                                        "label": "opt2"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "TextareaQuestion",
+                                "slug": "textarea-question",
+                                "label": "textarea question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "textareaMaxLength": null,
+                                "placeholder": ""
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "FileQuestion",
+                                "slug": "file-question",
+                                "label": "file question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": ""
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "IntegerQuestion",
+                                "slug": "integer-question",
+                                "label": "integer question",
+                                "isRequired": "false",
+                                "isHidden": "false",
+                                "meta": {},
+                                "infoText": "",
+                                "integerMinValue": null,
+                                "integerMaxValue": null,
+                                "placeholder": ""
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "answers": {
+              "edges": [
+                {
+                  "node": {
+                    "__typename": "StringAnswer",
+                    "id": "U3RyaW5nQW5zd2VyOjI5YzhjNDk3LWQ0MjItNDAwZi1iOTA0LTI2OGUxNDVhMDNmNQ==",
+                    "question": {
+                      "slug": "choice-question",
+                      "label": "choice question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "ChoiceQuestion",
+                      "choiceOptions": {
+                        "edges": [
+                          {
+                            "node": {
+                              "__typename": "Option",
+                              "slug": "choice-question-opt-1",
+                              "label": "opt 1"
+                            }
+                          },
+                          {
+                            "node": {
+                              "__typename": "Option",
+                              "slug": "choice-question-opt-2",
+                              "label": "opt 2"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "stringValue": "choice-question-opt-1"
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "ListAnswer",
+                    "id": "TGlzdEFuc3dlcjo4NTc4MDA3NC1mMTZkLTRiNjItYmVhYy1kNTMyNWMzYTM0NzY=",
+                    "question": {
+                      "slug": "choices-question",
+                      "label": "choices-question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "MultipleChoiceQuestion",
+                      "multipleChoiceOptions": {
+                        "edges": [
+                          {
+                            "node": {
+                              "__typename": "Option",
+                              "slug": "choices-question-opt1",
+                              "label": "opt1"
+                            }
+                          },
+                          {
+                            "node": {
+                              "__typename": "Option",
+                              "slug": "choices-question-opt2",
+                              "label": "opt2"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "listValue": [
+                      "choices-question-opt1",
+                      "choices-question-opt2"
+                    ]
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "FloatAnswer",
+                    "id": "RmxvYXRBbnN3ZXI6MWNlZmMyMjAtMjZlMS00OTU0LWE0MTgtZDZmZGIwMTk3NThj",
+                    "question": {
+                      "slug": "float-question",
+                      "label": "float question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "FloatQuestion",
+                      "floatMinValue": null,
+                      "floatMaxValue": null,
+                      "placeholder": ""
+                    },
+                    "floatValue": 0.123
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "TableAnswer",
+                    "id": "VGFibGVBbnN3ZXI6ZDgyZDAxMWMtZDJlMS00NzhmLTlkMGYtNmUwNjUyOWQzNzBi",
+                    "question": {
+                      "slug": "table-question",
+                      "label": "table-question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "TableQuestion"
+                    },
+                    "tableValue": [
+                      {
+                        "__typename": "Document",
+                        "id": "RG9jdW1lbnQ6Zjc4YTE3YmItYzQ1My00MjA1LTg4YTYtMzNhYWJmYzYxYjYx",
+                        "form": {
+                          "__typename": "Form",
+                          "slug": "table-form",
+                          "questions": {
+                            "edges": [
+                              {
+                                "node": {
+                                  "__typename": "TextQuestion",
+                                  "slug": "text-question",
+                                  "label": "text question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "textMaxLength": null,
+                                  "placeholder": ""
+                                }
+                              },
+                              {
+                                "node": {
+                                  "__typename": "ChoiceQuestion",
+                                  "slug": "choice-question",
+                                  "label": "choice question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "choiceOptions": {
+                                    "edges": [
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-1",
+                                          "label": "opt 1"
+                                        }
+                                      },
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-2",
+                                          "label": "opt 2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "answers": {
+                          "edges": [
+                            {
+                              "node": {
+                                "__typename": "StringAnswer",
+                                "id": "U3RyaW5nQW5zd2VyOjJjNDlmOGU2LTVjODYtNDZjZC1hYmZmLTUxZjY0MGMyNDgxNQ==",
+                                "question": {
+                                  "slug": "text-question",
+                                  "label": "text question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "__typename": "TextQuestion",
+                                  "textMaxLength": null,
+                                  "placeholder": ""
+                                },
+                                "stringValue": "fdafdsa"
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "StringAnswer",
+                                "id": "U3RyaW5nQW5zd2VyOjI5M2E3YzMxLWM3ZDctNDliNS1hM2RhLTIyYzhhZDc5NWZiZA==",
+                                "question": {
+                                  "slug": "choice-question",
+                                  "label": "choice question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "__typename": "ChoiceQuestion",
+                                  "choiceOptions": {
+                                    "edges": [
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-1",
+                                          "label": "opt 1"
+                                        }
+                                      },
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-2",
+                                          "label": "opt 2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "stringValue": "choice-question-opt-1"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "__typename": "Document",
+                        "id": "RG9jdW1lbnQ6YWVkN2VhNmQtOGZkOC00YjA3LTgwNGUtMDE0ZjVjOGY3N2Ni",
+                        "form": {
+                          "__typename": "Form",
+                          "slug": "table-form",
+                          "questions": {
+                            "edges": [
+                              {
+                                "node": {
+                                  "__typename": "TextQuestion",
+                                  "slug": "text-question",
+                                  "label": "text question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "textMaxLength": null,
+                                  "placeholder": ""
+                                }
+                              },
+                              {
+                                "node": {
+                                  "__typename": "ChoiceQuestion",
+                                  "slug": "choice-question",
+                                  "label": "choice question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "choiceOptions": {
+                                    "edges": [
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-1",
+                                          "label": "opt 1"
+                                        }
+                                      },
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-2",
+                                          "label": "opt 2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "answers": {
+                          "edges": [
+                            {
+                              "node": {
+                                "__typename": "StringAnswer",
+                                "id": "U3RyaW5nQW5zd2VyOmIxZTZjZjdjLTFiNDAtNDMxMS1hYjg0LWJjZmU5ZGZlNmNkZg==",
+                                "question": {
+                                  "slug": "text-question",
+                                  "label": "text question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "__typename": "TextQuestion",
+                                  "textMaxLength": null,
+                                  "placeholder": ""
+                                },
+                                "stringValue": "feaswe"
+                              }
+                            },
+                            {
+                              "node": {
+                                "__typename": "StringAnswer",
+                                "id": "U3RyaW5nQW5zd2VyOjI1YTM4MjdlLThkMGQtNDY5Mi1hNzM3LWM1ZDBlNDE1NDczMA==",
+                                "question": {
+                                  "slug": "choice-question",
+                                  "label": "choice question",
+                                  "isRequired": "false",
+                                  "isHidden": "false",
+                                  "meta": {},
+                                  "infoText": "",
+                                  "__typename": "ChoiceQuestion",
+                                  "choiceOptions": {
+                                    "edges": [
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-1",
+                                          "label": "opt 1"
+                                        }
+                                      },
+                                      {
+                                        "node": {
+                                          "__typename": "Option",
+                                          "slug": "choice-question-opt-2",
+                                          "label": "opt 2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "stringValue": "choice-question-opt-1"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "StringAnswer",
+                    "id": "U3RyaW5nQW5zd2VyOmJmYTEzMDNlLWM4ZGItNDFiNC1iMTliLWRmYjk1NzA4MWY4OQ==",
+                    "question": {
+                      "slug": "text-question",
+                      "label": "text question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "TextQuestion",
+                      "textMaxLength": null,
+                      "placeholder": ""
+                    },
+                    "stringValue": "asdf"
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "StringAnswer",
+                    "id": "U3RyaW5nQW5zd2VyOjFjODE1ODA5LTFlYzEtNGJkZi04N2ViLWFmYzk3OTkzNGZmYg==",
+                    "question": {
+                      "slug": "textarea-question",
+                      "label": "textarea question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "TextareaQuestion",
+                      "textareaMaxLength": null,
+                      "placeholder": ""
+                    },
+                    "stringValue": "fabawe wer \nbawed"
+                  }
+                },
+                {
+                  "node": {
+                    "__typename": "IntegerAnswer",
+                    "id": "SW50ZWdlckFuc3dlcjo2M2FkODJlZS1lMzcxLTRhMWYtYWQ0MC05NzMwN2FmZDAxMTk=",
+                    "question": {
+                      "slug": "integer-question",
+                      "label": "integer question",
+                      "isRequired": "false",
+                      "isHidden": "false",
+                      "meta": {},
+                      "infoText": "",
+                      "__typename": "IntegerQuestion",
+                      "integerMinValue": null,
+                      "integerMaxValue": null,
+                      "placeholder": ""
+                    },
+                    "integerValue": 123
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
