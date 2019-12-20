@@ -1,4 +1,5 @@
 import base64
+from abc import ABC, abstractmethod
 
 from .parser import parse_document
 
@@ -38,19 +39,28 @@ def make_property(constructor, key):
 
 
 class Form:
-    def __init__(self, raw):
+    def __init__(self, document, raw):
         assert raw.get("__typename") == "Form", "raw must be a caluma `Form`"
+        self.root_document = document
         self.raw = raw
+        self.fields = [Field(document, question) for question in self.raw["questions"]]
 
     uuid = make_property(decode_id, "id")
 
 
 class Question:
-    def __init__(self, raw):
+    def __init__(self, document, raw):
         assert raw.get("__typename").endswith(
             "Question"
         ), "raw must be a caluma `Question`"
+        self.question_type = raw["__typename"]
+        self.root_document = document
         self.raw = raw
+        self.child_form = None
+        if self.question_type == "FormQuestion":
+            self.child_form = Form(document, self.raw["subForm"])
+        elif self.question_type == "TableQuestion":
+            self.child_form = Form(document, self.raw["rowForm"])
 
 
 class Answer:
@@ -74,15 +84,27 @@ class Answer:
 
 
 class Field:
-    def __init__(self, fieldset, raw):
-        assert "question" in raw, "Raw must contain Question"
-
-        self.fieldset = fieldset
+    def __init__(self, document, raw):
+        assert raw.get("__typename", "").endswith(
+            "Question"
+        ), "Raw must contain Question"
+        # self.fieldset = fieldset
+        self.root_document = document
         self.raw = raw
-
         self.options = None  # TODO?
+        self.question = Question(document, self.raw)
+        # TODO answer
 
-    question = make_property(Question, "question")
+    # question = make_property(Question, "question")
+    def _find_answer(self):
+        return next(
+            (
+                answer
+                for answer in self.root_document.raw["answers"]
+                if answer.get("question", {}).get("slug") == self.question.get("slug")
+            ),
+            None,
+        )
 
     @property
     def answer(self):
@@ -108,9 +130,10 @@ class Document:
     def __init__(self, raw):
         assert raw.get("__typename") == "Document", "raw must be a caluma `Document`"
         self.raw = raw
+        self.form = Form(self, raw.get("form"))
 
     uuid = make_property(decode_id, "id")
-    root_form = make_property(Form, "rootForm")
+    # form = make_property(Form, "form")
 
     @property
     def pk(self):
@@ -169,3 +192,34 @@ class Fieldset:
     @property
     def field(self):
         raise NotImplementedError
+
+
+class Visitor(ABC):
+    def visit(self, node):
+        cls_name = type(node).__name__.lower()
+        method = getattr(self, "_visit_" + cls_name)
+        return method(node)
+
+    @abstractmethod
+    def _visit_document(self, node):
+        pass
+
+    @abstractmethod
+    def _visit_form(self, node):
+        pass
+
+    @abstractmethod
+    def _visit_field(self, node):
+        pass
+
+    @abstractmethod
+    def _visit_fieldset(self, node):
+        pass
+
+    @abstractmethod
+    def _visit_question(self, node):
+        pass
+
+    @abstractmethod
+    def _visit_answer(self, node):
+        pass
